@@ -1,109 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coding Bookmarks</title>
-  <link rel="icon" type="image/x-icon" href="img/494568.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #88C6AD, #AD88C6);
-      background-attachment: fixed;
-    }
-    .header {
-      text-align: center;
-      padding: 40px 0;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: #333;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-bottom: 2px solid #C688AD;
-      transition: background-color 0.3s;
-    }
-    .header:hover {
-      background-color: #fff;
-    }
-    h1 {
-      margin: 0;
-      font-size: 3rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    h3 {
-      margin: 5px 0;
-      color: #333;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid #fff;
-      width: 50%;
-      margin: 20px auto;
-    }
-    ol {
-      padding: 0 20px;
-      list-style-type: none;
-    }
-    li {
-      margin-bottom: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 10px;
-      border-radius: 5px;
-      transition: transform 0.3s;
-    }
-    li:hover {
-      transform: translateY(-5px);
-    }
-    a {
-      color: #C688AD;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a:hover {
-      color: #AD88C6;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Bookmarks</title>
+    <link rel="icon" type="image/x-icon" href="img/kali.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto Mono", monospace;
+        margin: 0;
+        padding: 0;
+        background-color: #111010;
+        color: #00ff00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <h1>CODING BOOKMARKS</h1>
-    <h3>All important websites needed for CODING</h3>
-  </div>
-  <hr />
-  <ol>
-    <li>
-      <a href="https://replit.com/@AkashDas59" target="_blank">Online IDE</a>
-    </li>
-    <li>
-      <a href="https://github.com/dasakash26" target="_blank">GitHub</a>
-    </li>
-    <li>
-      <a href="https://learn.thecodehelp.in/s/courses/64ac1e26e4b058d162d922bc/take" target="_blank">Code Help</a>
-    </li>
-    <li>
-      <a href="https://www.udemy.com/home/my-courses/learning/" target="_blank">Udemy</a>
-    </li>
-    <li>
-      <a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/" target="_blank">Striver's DSA Sheet</a>
-    </li>
-    <li>
-      <strong>Problem Solving Sites</strong>
-      <ul>
-        <li><a href="https://www.hackerrank.com/profile/akashd2664" target="_blank">Hacker Rank</a></li>
-        <li><a href="https://leetcode.com/problems/" target="_blank">Leet Code</a></li>
-        <li><a href="https://codeforces.com/profile/dasakash26" target="_blank">Code Forces</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">Mozilla Web Reference</a>
-    </li>
-  </ol>
-</body>
+      .window {
+        background-color: #000;
+        border: 2px solid #00ff00;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 1000px;
+        padding: 60px;
+        padding-top: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        animation: glitch 3s infinite;
+      }
+      .title-bar {
+        background-color: #3c3c3c;
+        border-radius: 2px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .title-text {
+        font-size: 1.2rem;
+        color: #00ff00;
+        animation: typing 4s steps(12) forwards;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #00ff00;
+      }
+      h3 {
+        margin: 10px 0;
+        font-size: 1.2rem;
+        color: #00ff00;
+        position: relative;
+        display: inline-block;
+      }
+      .cursor {
+        position: absolute;
+        bottom: 0.2rem;
+        right: -10px;
+        width: 0.3rem;
+        height: 0.9rem;
+        background-color: #00ff00;
+        animation: blink 0.8s infinite;
+      }
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 50%;
+        margin: 20px auto;
+      }
+      ol {
+        padding: 0;
+        list-style-type: none;
+      }
+      .category {
+        margin-bottom: 20px;
+      }
+      .category-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .category-list {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+        background-color: #000;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+        max-width: 0;
+        white-space: nowrap;
+      }
+      li:nth-child(odd) {
+        animation: typing 2s steps(30, end) forwards;
+      }
+      li:nth-child(even) {
+        animation: typing 2s steps(30, end) forwards;
+        animation-delay: 2s;
+      }
+      li:hover {
+        transform: translateX(5px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      a {
+        color: #00ff00;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        transition: background-color 0.3s;
+      }
+      a:hover {
+        background-color: rgba(0, 255, 0, 0.1);
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      @keyframes typing {
+        from {
+          max-width: 0;
+        }
+        to {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-text">CODING BOOKMARKS</div>
+        <div class="buttons">
+          <div class="button close-button"></div>
+          <div class="button minimize-button"></div>
+          <div class="button fullscreen-button"></div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="header">
+          <h3>Essential Websites for Coding<span class="cursor"></span></h3>
+        </div>
+        <hr />
+        <div class="category">
+          <div class="category-title">Online IDEs:</div>
+          <ol class="category-list">
+            <li>
+              <a href="https://replit.com/@AkashDas59" target="_blank"
+                >Replit</a
+              >
+            </li>
+            <li>
+              <a href="https://onecompiler.com/cpp" target="_blank"
+                >OneCompiler</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="category">
+          <div class="category-title">Repositories:</div>
+          <ol class="category-list">
+            <li>
+              <a href="https://github.com/dasakash26" target="_blank">GitHub</a>
+            </li>
+          </ol>
+        </div>
+        <div class="category">
+          <div class="category-title">Learning Platforms:</div>
+          <ol class="category-list">
+            <li>
+              <a
+                href="https://learn.thecodehelp.in/s/courses/64ac1e26e4b058d162d922bc/take"
+                target="_blank"
+                >Code Help</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.udemy.com/home/my-courses/learning/"
+                target="_blank"
+                >Udemy</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="category">
+          <div class="category-title">Problem Solving Sites:</div>
+          <ol class="category-list">
+            <li>
+              <a href="https://leetcode.com/problems/" target="_blank"
+                >Leet Code</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://codeforces.com/profile/dasakash26"
+                target="_blank"
+                >Code Forces</a
+              >
+            </li>
+            <li>
+              <a href="https://www.codechef.com/dashboard" target="_blank"
+                >CodeChef</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.hackerrank.com/profile/akashd2664"
+                target="_blank"
+                >Hacker Rank</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="category">
+          <div class="category-title">Web Development References:</div>
+          <ol class="category-list">
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web"
+                target="_blank"
+                >Mozilla Web Reference</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="category-title">Programming Helpers:</div>
+        <ol class="category-list">
+          <li>
+            <a href="https://pythontutor.com/cpp.html#mode=edit" target="_blank"
+              >Code Visualizer</a
+            >
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
 </html>
